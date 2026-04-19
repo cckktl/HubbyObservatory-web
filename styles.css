@@ -1,0 +1,172 @@
+/* ============================================================
+   Design tokens — matches app Theme.swift
+   ============================================================ */
+:root {
+  --bg-gradient-start: #FAF0FF;
+  --bg-gradient-end:   #E0FAFF;
+  --white:             #FFFFFF;
+  --text-primary:      #2F3542;
+  --text-secondary:    #57606F;
+  --text-tertiary:     #747D8C;
+  --accent-cyan:       #00D1FF;
+  --border:            2px solid #2F3542;
+  --pixel-shadow:      3px 3px 0 #2F3542;
+  --radius:            8px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+  min-height: 100vh;
+  color: var(--text-primary);
+}
+
+/* ---- NAV ---- */
+.site-nav {
+  background: var(--white);
+  border-bottom: var(--border);
+  padding: 0 40px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: monospace;
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.nav-logo img {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: var(--border);
+  image-rendering: pixelated;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lang-btn {
+  background: var(--bg-gradient-end);
+  border: var(--border);
+  border-radius: 4px;
+  padding: 5px 12px;
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.lang-btn:hover { background: var(--bg-gradient-start); }
+
+.nav-dl-btn {
+  background: var(--text-primary);
+  color: var(--white);
+  border-radius: 6px;
+  padding: 7px 16px;
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 2px 2px 0 var(--accent-cyan);
+}
+
+/* ---- FOOTER ---- */
+.site-footer {
+  background: var(--text-primary);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.site-footer .copy {
+  font-family: monospace;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  font-family: monospace;
+  font-size: 12px;
+  color: var(--accent-cyan);
+  text-decoration: none;
+}
+
+.footer-links a:hover { text-decoration: underline; }
+
+/* ---- CONTENT PAGE (privacy / terms) ---- */
+.content-wrap {
+  max-width: 720px;
+  margin: 48px auto;
+  padding: 0 24px;
+}
+
+.content-card {
+  background: var(--white);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--pixel-shadow);
+  padding: 40px 48px;
+}
+
+.content-card h1 {
+  font-family: monospace;
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.content-card .last-updated {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-bottom: 32px;
+}
+
+.content-card h2 {
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 28px 0 8px;
+}
+
+.content-card p, .content-card li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.content-card ul { padding-left: 20px; }
+.content-card a { color: var(--accent-cyan); }
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .site-nav { padding: 0 16px; }
+  .site-footer { padding: 16px; }
+  .content-card { padding: 24px 20px; }
+}
