@@ -8,4 +8,4 @@ Hosted via GitHub Pages.
 - [Privacy Policy](./privacy.html)
 - [Terms of Use](./terms.html)
 
-Contact: hubbyobservatory@gmail.com
+Contact: kkchemaa@gmail.com
